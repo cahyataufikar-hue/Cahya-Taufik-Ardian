@@ -1,1 +1,506 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahya Taufik Ardian | Digital Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f5ff',
+                            100: '#e0ebff',
+                            500: '#4f46e5',
+                            600: '#4338ca',
+                            700: '#3730a3',
+                            800: '#1e1b4b',
+                            accent: '#06b6d4'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card transition-all duration-300 border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="text-lg font-bold bg-gradient-to-r from-brand-600 to-brand-accent bg-clip-text text-transparent flex items-center gap-2">
+                <span class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-extrabold text-sm shadow-md">CTA</span>
+                Cahya Taufik
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600">
+                <a href="#hero" class="hover:text-brand-600 transition">Beranda</a>
+                <a href="#about" class="hover:text-brand-600 transition">Tentang Saya</a>
+                <a href="#skills" class="hover:text-brand-600 transition">Keahlian</a>
+                <a href="#projects" class="hover:text-brand-600 transition">Projek</a>
+                <a href="#contact" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-full transition shadow-sm">Kontak</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-brand-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3 text-xs font-semibold text-slate-600">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 hover:text-brand-600">Beranda</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 hover:text-brand-600">Tentang Saya</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block py-2 hover:text-brand-600">Keahlian</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 hover:text-brand-600">Projek</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-brand-600 font-bold">Kontak</a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section id="hero" class="pt-28 pb-16 md:pt-36 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column: Text & Intro -->
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Siswa SMK Cyber Media - Jurusan MPLB
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+                    Halo, Saya <br class="hidden sm:inline"/>
+                    <span class="bg-gradient-to-r from-brand-600 to-brand-accent bg-clip-text text-transparent">Cahya Taufik Ardian</span>
+                </h1>
+                
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto md:mx-0">
+                    Spesialis Administrasi Perkantoran &amp; Manajemen Layanan Bisnis yang berdedikasi. Siap memberikan kontribusi nyata serta mengeksplorasi pengalaman baru di bidang profesional.
+                </p>
+
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                    <a href="https://instagram.com/cahyaataufikkarr" target="_blank" rel="noopener noreferrer" 
+                       class="w-full sm:w-auto px-6 py-3.5 bg-gradient-to-r from-pink-500 via-red-500 to-amber-500 hover:opacity-95 text-white font-bold text-xs rounded-xl shadow-lg shadow-pink-500/20 transition flex items-center justify-center gap-2.5">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                        Ikuti Saya (@cahyaataufikkarr)
+                    </a>
+                    
+                    <a href="#projects" class="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs rounded-xl border border-slate-200 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-briefcase text-slate-400"></i>
+                        Lihat Portofolio
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Profile Picture Matching Height -->
+            <div class="flex justify-center md:justify-end">
+                <div class="relative w-full max-w-sm aspect-square">
+                    <!-- Decorative Background Card Glow -->
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-600 to-brand-accent rounded-3xl blur-lg opacity-30 animate-pulse"></div>
+                    
+                    <!-- Profile Card Image Frame -->
+                    <div class="relative w-full h-full rounded-3xl bg-white border border-slate-200 p-3 shadow-xl overflow-hidden flex flex-col justify-end">
+                        <img src="https://placehold.co/600x600/1e1b4b/ffffff?text=Cahya+Taufik" 
+                             alt="Foto Profil Cahya Taufik Ardian" 
+                             class="w-full h-full object-cover rounded-2xl bg-slate-100 transition hover:scale-105 duration-500">
+                        
+                        <!-- Floating Badge Overlay -->
+                        <div class="absolute bottom-6 left-6 right-6 p-3 glass-card rounded-xl shadow-lg border border-white/60 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-800">Cahya Taufik A.</h4>
+                                <p class="text-[10px] text-slate-500">MPLB Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT SECTION -->
+    <section id="about" class="py-16 bg-white border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-1">Tentang Saya</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Mengenal Lebih Dekat</h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Info Card 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-800 mb-2">Pendidikan Saat Ini</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Saya merupakan siswa aktif di <strong>SMK CYBER MEDIA</strong>, menimba ilmu dan mengembangkan potensi di lingkungan pendidikan yang dinamis.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-brand-600">SMK Cyber Media</span>
+                </div>
+
+                <!-- Info Card 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-folder-tree"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-800 mb-2">Jurusan MPLB</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Mengambil konsentrasi keahlian <strong>Manajemen Perkantoran dan Layanan Bisnis (MPLB)</strong>, berfokus pada tata kelola administrasi modern, korespondensi, dan layanan prima.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-cyan-600">Kompetensi Perkantoran</span>
+                </div>
+
+                <!-- Info Card 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4 hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-800 mb-2">Tujuan &amp; Orientasi</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Saat ini saya aktif mencari peluang serta pengalaman kerja praktis di bidang operasional perkantoran untuk mengasah profesionalisme dan keterampilan interpersonal.
+                        </p>
+                    </div>
+                    <span class="text-[11px] font-semibold text-amber-600">Siap Magang / Kerja</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SKILL SECTION -->
+    <section id="skills" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-1">Keahlian Saya</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Kemampuan &amp; Alat Kerja</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- ADVANCED SKILLS -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-award text-amber-500"></i> Advance Level
+                        </h4>
+                        <span class="px-2 py-0.5 bg-amber-50 text-amber-600 text-[10px] font-bold rounded-full border border-amber-200">Mahir</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Microsoft Word</span>
+                                <span class="text-amber-600">95%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-amber-500 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Microsoft Excel</span>
+                                <span class="text-amber-600">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-amber-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Microsoft PowerPoint</span>
+                                <span class="text-amber-600">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-amber-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INTERMEDIATE SKILLS -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-brand-500"></i> Intermediate Level
+                        </h4>
+                        <span class="px-2 py-0.5 bg-brand-50 text-brand-600 text-[10px] font-bold rounded-full border border-brand-200">Menengah</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Canva Design</span>
+                                <span class="text-brand-600">80%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-500 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>CapCut Video Editing</span>
+                                <span class="text-brand-600">75%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-500 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BASIC SKILLS -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-code text-cyan-500"></i> Basic Level
+                        </h4>
+                        <span class="px-2 py-0.5 bg-cyan-50 text-cyan-600 text-[10px] font-bold rounded-full border border-cyan-200">Dasar Web</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>HTML5</span>
+                                <span class="text-cyan-600">65%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-cyan-500 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>CSS3 &amp; Tailwind</span>
+                                <span class="text-cyan-600">60%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-cyan-500 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>JavaScript</span>
+                                <span class="text-cyan-600">50%</span>
+                            </div>
+                            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-cyan-500 rounded-full" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PROJECT SECTION -->
+    <section id="projects" class="py-16 bg-white border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-1">Portofolio Projek</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Aplikasi Yang Saya Kembangkan</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Project Item 1 -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
+                    <div class="p-5 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-brand-600 transition">Aplikasi Edukasi Digital</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Platform aplikasi web interaktif pendukung kegiatan pembelajaran dan administrasi edukasi.
+                        </p>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://share.gemini.google/JvVFJhrzSdAC" target="_blank" rel="noopener noreferrer" 
+                           class="w-full py-2 bg-white hover:bg-brand-600 hover:text-white text-slate-700 font-semibold text-xs rounded-xl border border-slate-200 transition flex items-center justify-center gap-1.5 shadow-sm">
+                            Buka Projek <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
+                    <div class="p-5 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-brand-600 transition">Aplikasi To-Do List</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Aplikasi manajemen tugas harian modern untuk meningkatkan efisiensi dan produktivitas kerja.
+                        </p>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://share.gemini.google/wZo1BR7SF1WY" target="_blank" rel="noopener noreferrer" 
+                           class="w-full py-2 bg-white hover:bg-brand-600 hover:text-white text-slate-700 font-semibold text-xs rounded-xl border border-slate-200 transition flex items-center justify-center gap-1.5 shadow-sm">
+                            Buka Projek <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Item 3 -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
+                    <div class="p-5 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-brand-600 transition">Aplikasi Inventaris Barang</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Sistem pengelolaan stok &amp; aset barang perkantoran dengan pencatatan yang terorganisir.
+                        </p>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://share.gemini.google/jSY7HlTl8KoE" target="_blank" rel="noopener noreferrer" 
+                           class="w-full py-2 bg-white hover:bg-brand-600 hover:text-white text-slate-700 font-semibold text-xs rounded-xl border border-slate-200 transition flex items-center justify-center gap-1.5 shadow-sm">
+                            Buka Projek <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Item 4 -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-lg transition group">
+                    <div class="p-5 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg font-bold">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm group-hover:text-brand-600 transition">Aplikasi Resepsionis</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            Sistem manajemen tamu (Guestbook) digital untuk penerimaan tamu kantor secara profesional.
+                        </p>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <a href="https://share.gemini.google/qBpGrvKgqEXH" target="_blank" rel="noopener noreferrer" 
+                           class="w-full py-2 bg-white hover:bg-brand-600 hover:text-white text-slate-700 font-semibold text-xs rounded-xl border border-slate-200 transition flex items-center justify-center gap-1.5 shadow-sm">
+                            Buka Projek <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT & FOOTER SECTION -->
+    <section id="contact" class="py-16 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="space-y-6">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-accent">Kontak Saya</h2>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Mari Terhubung dan Bekerja Sama</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Jika Anda memiliki pertanyaan, peluang magang, atau ingin berdiskusi mengenai projek administrasi &amp; digital, jangan ragu untuk menghubungi saya.
+                    </p>
+
+                    <div class="space-y-3 text-xs text-slate-300">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-brand-accent">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span>SMK Cyber Media (MPLB)</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-pink-400">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <a href="https://instagram.com/cahyaataufikkarr" target="_blank" class="hover:text-white transition">@cahyaataufikkarr</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Mock -->
+                <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 shadow-xl backdrop-blur-sm">
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+                        <div>
+                            <label class="block text-slate-300 font-semibold mb-1">Nama Lengkap</label>
+                            <input type="text" required placeholder="Nama Anda" class="w-full p-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent">
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 font-semibold mb-1">Email / Kontak</label>
+                            <input type="text" required placeholder="Email atau No. WhatsApp Anda" class="w-full p-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent">
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 font-semibold mb-1">Pesan / Penawaran</label>
+                            <textarea rows="3" required placeholder="Tuliskan pesan Anda di sini..." class="w-full p-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl transition shadow-lg shadow-brand-600/30 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="mt-16 pt-8 border-t border-slate-800 text-center text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>&copy; 2026 Cahya Taufik Ardian. All Rights Reserved.</p>
+                <p class="flex items-center gap-1">Dibuat dengan <i class="fa-solid fa-heart text-red-500"></i> &amp; Tailwind CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-emerald-600 text-white px-4 py-3 rounded-xl shadow-2xl text-xs font-semibold flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Pesan berhasil dikirim!</span>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
